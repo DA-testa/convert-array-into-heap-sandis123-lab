@@ -31,7 +31,7 @@ def main():
     with open(f"tests/{filename}") as f:
         ipt = int(f.readline())
         data = list(map(int, f.readline().split()))
-        assert len(data) == n
+        assert len(data) == ipt
 swaps = build_heap(data)
 
 print(len(swaps))
