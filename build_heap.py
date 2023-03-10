@@ -25,9 +25,9 @@ def main():
         n= int(input())
         data = list(map(int, input().split()))
     elif "F" in mode:
-    filename = input()
-    if 'a' in filename:
-        return
+        filename = input()
+         if 'a' in filename:
+             return
     with open(f"tests/{filename}") as f:
         n = int(f.readline())
         data = list(map(int, f.readline().split()))
