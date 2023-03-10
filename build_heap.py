@@ -1,16 +1,16 @@
 # python3
 def heap(data):
     swaps = []
-    n = len(data)
-    for i in range (n // 2, -1, -1):
+    ipt = len(data)
+    for i in range (ipt // 2, -1, -1):
         j = i
         while True:
             right = j * 2 + 2
             left = j * 2 + 1
             smallest = j 
-            if right < n and data[right] < data[smallest]:
+            if right < ipt and data[right] < data[smallest]:
                 smallest = right
-            if left < n and data[left] < data[smallest]:
+            if left < ipt and data[left] < data[smallest]:
                 smallest = left
             if smallest != j:
                 swaps.append((j, smallest))
