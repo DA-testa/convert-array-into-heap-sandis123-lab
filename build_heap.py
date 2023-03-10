@@ -18,13 +18,13 @@ def heap(data):
                 j = smallest
             else:
                 break
-                return swaps
+        return swaps
 def main():
     mode = input()
     if "I" in mode:
         n= int(input())
         data = list(map(int, input().split()))
-   elif "F" in mode:
+    elif "F" in mode:
     filename = input()
     if 'a' in filename:
         return
