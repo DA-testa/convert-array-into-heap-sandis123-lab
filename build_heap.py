@@ -18,7 +18,7 @@ def heap(data):
                 j = smallest
             else:
                 break
-        return swaps
+  return swaps
 def main():
     mode = input()
     if "I" in mode:
