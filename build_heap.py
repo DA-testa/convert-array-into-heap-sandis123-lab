@@ -2,15 +2,15 @@
 def heap(data):
     swaps = []
     ipt = len(data)
-    for i in range (ipt // 2, -1, -1):
+    for i in range (n // 2, -1, -1):
         j = i
         while True:
             right = j * 2 + 2
             left = j * 2 + 1
             smallest = j 
-            if right < ipt and data[right] < data[smallest]:
+            if right < n and data[right] < data[smallest]:
                 smallest = right
-            if left < ipt and data[left] < data[smallest]:
+            if left < n and data[left] < data[smallest]:
                 smallest = left
             if smallest != j:
                 swaps.append((j, smallest))
@@ -22,17 +22,17 @@ def heap(data):
 def main():
     mode = input()
     if "I" in mode:
-        ipt= int(input())
+        n= int(input())
         data = list(map(int, input().split()))
    elif "F" in mode:
     filename = input()
     if 'a' in filename:
         return
     with open(f"tests/{filename}") as f:
-        ipt = int(f.readline())
+        n = int(f.readline())
         data = list(map(int, f.readline().split()))
-        assert len(data) == ipt
-swaps = build_heap(data)
+        assert len(data) == n
+swaps = heap(data)
 
 print(len(swaps))
 for i, j in swaps:
